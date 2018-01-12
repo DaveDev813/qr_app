@@ -1,0 +1,92 @@
+
+@import "bootstrap/bootstrap";   
+
+@mixin center-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin square($size){
+    width: $size;
+    height: $size;
+};
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+body #main_app {
+
+    width: 100%;
+    min-height: 100vh;
+    background: #24c6dc;
+    background: -moz-linear-gradient(left, #24c6dc 0%, #5f2c82 100%); 
+    background: -webkit-linear-gradient(left, #24c6dc 0%,#5f2c82 100%); 
+    background: linear-gradient(to right, #24c6dc 0%,#5f2c82 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24c6dc', endColorstr='#5f2c82',GradientType=1 ); 
+
+    .container {
+
+        @include size(100%);
+
+        .card{
+            @include center-screen;
+            height: 70vh;
+            width: 50vw;
+            background: none;
+
+            &::before{
+                @include pseudo;
+                background: rgba(0, 0, 0, 0.31);;
+                @include square(100%);
+            }
+            
+            #title {
+                
+                text-align: center;
+                z-index: 1;
+                background: red;
+                width: 90%;
+                padding: 10px;
+                margin: 0 auto;
+                margin-top: -29px;
+                border-radius: 3px;
+                
+                background: rgb(19,78,94); /* Old browsers */
+                background: -moz-linear-gradient(left, rgba(19,78,94,1) 0%, rgba(113,178,128,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(left, rgba(19,78,94,1) 0%,rgba(113,178,128,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right, rgba(19,78,94,1) 0%,rgba(113,178,128,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#134e5e', endColorstr='#71b280',GradientType=1 ); /* IE6-9 */
+                
+                h1{
+                    color: wheat;
+                    font-family: unset;
+                    font-size: 1.8em;
+                }
+            }
+            
+            #content {
+                width: 100%;
+                height: 100%;
+                padding: 26px;
+                padding-bottom: 0;
+                background: blue;
+                
+                #default {
+                    @include center-screen;
+                }
+            }
+            
+            #control {
+                
+                padding: 50px 26px;
+                
+                button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}  

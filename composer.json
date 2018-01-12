@@ -1,0 +1,14 @@
+{
+    "name": "rodave/qr_app",
+    "description": "qr application sample",
+    "type": "project",
+    "authors": [
+        {
+            "name": "DaveDev13",
+            "email": "bobadilla.rodave@gmail.com"
+        }
+    ],
+    "require": {
+        "endroid/qr-code": "^3.1"
+    }
+}
