@@ -12,9 +12,9 @@
     height: $size;
 };
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
-  content: $content;
-  display: $display;
-  position: $pos;
+    content: $content;
+    display: $display;
+    position: $pos;
 }
 
 body #main_app {
@@ -42,9 +42,9 @@ body #main_app {
                 background: rgba(0, 0, 0, 0.31);;
                 @include square(100%);
             }
-            
+
             #title {
-                
+
                 text-align: center;
                 z-index: 1;
                 background: red;
@@ -53,38 +53,69 @@ body #main_app {
                 margin: 0 auto;
                 margin-top: -29px;
                 border-radius: 3px;
-                
+
                 background: rgb(19,78,94); /* Old browsers */
                 background: -moz-linear-gradient(left, rgba(19,78,94,1) 0%, rgba(113,178,128,1) 100%); /* FF3.6-15 */
                 background: -webkit-linear-gradient(left, rgba(19,78,94,1) 0%,rgba(113,178,128,1) 100%); /* Chrome10-25,Safari5.1-6 */
                 background: linear-gradient(to right, rgba(19,78,94,1) 0%,rgba(113,178,128,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#134e5e', endColorstr='#71b280',GradientType=1 ); /* IE6-9 */
-                
+
                 h1{
                     color: wheat;
                     font-family: unset;
                     font-size: 1.8em;
                 }
             }
-            
+
             #content {
                 width: 100%;
                 height: 100%;
                 padding: 26px;
                 padding-bottom: 0;
-                background: blue;
-                
+                /*                background: blue;*/
+
                 #default {
                     @include center-screen;
                 }
             }
-            
+
             #control {
-                
+
                 padding: 50px 26px;
-                
+
                 button{
                     width: 100%;
+                }
+            }
+        }
+
+        &[data-active="generate"]{
+            #content{
+                
+                text-align: center;
+                
+                iframe{
+                    border: none;
+                    background: transparent;
+                    margin: 40px;
+                    
+                    body{
+                      text-align: center;
+                      margin: 0px;
+                      overflow: hidden;
+                    }
+                }
+                .row {
+                    margin: 0;
+                    form{
+                        width: 100%;
+                    }
+                    input[type="text"]{
+                        border: 2px solid #fff;
+                    }
+                    input[type="submit"] {
+                        min-width: 12vw;
+                    }
                 }
             }
         }
