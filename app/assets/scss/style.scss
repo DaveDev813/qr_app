@@ -91,18 +91,18 @@ body #main_app {
 
         &[data-active="generate"]{
             #content{
-                
+
                 text-align: center;
-                
+
                 iframe{
                     border: none;
                     background: transparent;
                     margin: 40px;
-                    
+
                     body{
-                      text-align: center;
-                      margin: 0px;
-                      overflow: hidden;
+                        text-align: center;
+                        margin: 0px;
+                        overflow: hidden;
                     }
                 }
                 .row {
@@ -121,3 +121,32 @@ body #main_app {
         }
     }
 }  
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 480px) {
+    body #main_app {
+        .container {
+            .card {
+                width: 90vw;
+                height: 80vh;
+                #control {
+                    padding: 45px 26px;
+                }
+            }
+            &[data-active="generate"] #content {
+                
+                height: 70%;
+                
+                .row{
+                    margin-top: -28px;
+                }
+                
+                iframe{
+                    margin: 0;
+                    transform: translate(-19px, -45px) scale(0.8);
+                }
+            }
+        }
+    }
+}
+
