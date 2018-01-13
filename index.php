@@ -1,4 +1,4 @@
-<?php //print_r($_SERVER); die;?>
+
 <!DOCTYPE html>
 <html lang="en" >
     <head>
@@ -27,7 +27,27 @@
               
           </div>
         </div>
+          
+        <div id="notif" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Notification</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>notif</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="close" class="btn btn-warning" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+        
       <script src="app/assets/scripts/jquery-3.2.1.min.js"></script>
       <script src="app/assets/scripts/tether.min.js"></script>
       <script src="app/assets/scripts/bootstrap.min.js"></script>
